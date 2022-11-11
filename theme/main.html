@@ -1,13 +1,17 @@
 {{ page.title }}
-<hr>
-{{ page.content }}
+<hr> {{ page.content }}
 <hr>
 <p>
-  Now this is in the theme template, that means MkDocs's very own Jinja2.
+    Now this is in the theme template, that means MkDocs's very own Jinja2.
 </p>
 <ul>
-  <li>Printing <code>static_extra_var</code>: {{ config.extra.static_extra_var|default('DOES NOT WORK') }}</li>
-  <li>Printing <code>static_meta_var</code>: {{ page.meta.static_meta_var|default('DOES NOT WORK') }}</li>
-  <li>Printing <code>dynamic_extra_var</code>: {{ config.extra.dynamic_extra_var|default('DOES NOT WORK') }}</li>
-  <li>Printing <code>dynamic_meta_var</code>: {{ page.meta.dynamic_meta_var|default('DOES NOT WORK') }}</li>
+    <li>Printing <code>static_extra_var</code>: {{ config.extra.static_extra_var|default('DOES NOT WORK') }}</li>
+    <li>Printing <code>static_meta_var</code>: {{ page.meta.static_meta_var|default('DOES NOT WORK') }}</li>
+    <li>Printing <code>dynamic_extra_var</code>: {{ config.extra.dynamic_extra_var|default('DOES NOT WORK') }}</li>
+    <li>Printing <code>dynamic_meta_var</code>: {{ page.meta.dynamic_meta_var|default('DOES NOT WORK') }}</li>
+</ul>
+<ul>
+    <li>Printing <code>MULTI_ENV_VARIABLE</code>: {{ config.extra.MULTI_ENV_VARIABLE|default('DOES NOT WORK') }}</li>
+    <li>Printing <code>ENV_SPECIFIC_VARIABLE</code>: {{ config.extra.ENV_SPECIFIC_VARIABLE|default('DOES NOT WORK') }}</li>
+    <li>Printing <code>DATA_CENTER_SPECIFIC_VARIABLE</code>: {{ config.extra.DATA_CENTER_SPECIFIC_VARIABLE|default('DOES NOT WORK') }}</li>
 </ul>

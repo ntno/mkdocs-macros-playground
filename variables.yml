@@ -1,0 +1,24 @@
+---
+vars: 
+  MULTI_ENV_VARIABLE: "works! a variable which is the same across environments"
+environments:
+  dev:
+    vars:
+      ENV_SPECIFIC_VARIABLE: "works! development"
+    dcs:
+      us-east-1:
+        vars:
+          AWS_REGION: "us-east-1"
+          DATA_CENTER_SPECIFIC_VARIABLE: "works! us-east-1 datacenter" 
+      us-west-1:
+        vars:
+          AWS_REGION: "us-west-1"
+          DATA_CENTER_SPECIFIC_VARIABLE: "works! us-west-1 datacenter"            
+  prod:
+    vars:
+      ENV_SPECIFIC_VARIABLE: "works! production"
+    dcs:
+      us-east-1:
+        vars:
+          AWS_REGION: "us-east-1"
+          DATA_CENTER_SPECIFIC_VARIABLE: "works! us-east-1 datacenter"
