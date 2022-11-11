@@ -30,8 +30,14 @@ This is a sample repo with a minimal example of the behavior I desire and descri
    ```
    {{ YOU_VAR }}
    ```
-5. load the environment variables and run mkdocs in the same shell session (Makefile in this example uses docker)
-    ```
-    source "env/dev-us-east-1.env" && \
-    mkdocs serve
-    ```
+5. load the environment variables and run `mkdocs` in the same shell session
+   1. manually source / run (assuming you have `mkdocs` and `pip` requirements installed already)
+        ```
+        source "env/dev-us-east-1.env" && \
+        mkdocs serve
+        ```        
+   2. loading handled via docker-compose argument in example Makefile
+        ```
+        make serve file="env/dev-us-east-1.env"
+        ```
+  
