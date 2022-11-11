@@ -9,3 +9,6 @@ plugins:
 
 extra:
   static_extra_var: 'works!'
+  MULTI_ENV_VARIABLE: !ENV [MULTI_ENV_VARIABLE, 'did not work for MULTI_ENV_VARIABLE, loaded default from mkdocs.yml']
+  ENV_SPECIFIC_VARIABLE: !ENV [ENV_SPECIFIC_VARIABLE, 'did not work for ENV_SPECIFIC_VARIABLE, loaded default from mkdocs.yml']
+  DATA_CENTER_SPECIFIC_VARIABLE: !ENV [DATA_CENTER_SPECIFIC_VARIABLE, 'did not work for DATA_CENTER_SPECIFIC_VARIABLE, loaded default from mkdocs.yml']
