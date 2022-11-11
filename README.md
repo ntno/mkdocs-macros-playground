@@ -40,4 +40,11 @@ This is a sample repo with a minimal example of the behavior I desire and descri
         ```
         make serve file="env/dev-us-east-1.env"
         ```
-  
+        
+    
+### references
+- https://github.com/honzajavorek/mkdocs-macros-playground
+- https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/
+- https://github.com/Comcast/Buildenv-Tool
+- https://github.com/ntno/docker-containers
+- https://www.mkdocs.org/user-guide/configuration/#environment-variables      
