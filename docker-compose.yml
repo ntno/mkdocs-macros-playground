@@ -4,9 +4,9 @@ services:
     build: .
     restart: "no"
     ports:
-      - "8000:8000"
+      - "7000:7000"
     environment:
       LOG_LEVEL: info
     volumes:
       - './:/usr/src/'
-    entrypoint: [ "mkdocs", "serve", "-v", "--dev-addr=0.0.0.0:8000" ]
+    entrypoint: [ "mkdocs", "serve", "-v", "--dev-addr=0.0.0.0:7000" ]
