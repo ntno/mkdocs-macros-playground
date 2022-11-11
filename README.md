@@ -4,7 +4,7 @@ This is a sample repo with a minimal example of the behavior I desire and descri
 ## ntno fork reqs
 - docker
 - make
-- docker image with [buildenv](https://github.com/Comcast/Buildenv-Tool/), python, mkdocs installed (see [`ntno/ubuntu-build-base`](https://github.com/ntno/docker-containers/tree/main/ubuntu-build-base))
+- docker image with [buildenv](https://github.com/Comcast/Buildenv-Tool/), python, mkdocs installed (see [`ntno/ubuntu-build-base`](https://github.com/ntno/docker-containers/blob/main/ubuntu-build-base/Dockerfile#L84-L91))
 
 
 ## ntno fork example use case
