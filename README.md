@@ -5,3 +5,33 @@ This is a sample repo with a minimal example of the behavior I desire and descri
 - docker
 - make
 - docker image with [buildenv](https://github.com/Comcast/Buildenv-Tool/), python, mkdocs installed (see [`ntno/ubuntu-build-base`](https://github.com/ntno/docker-containers/tree/main/ubuntu-build-base))
+
+
+## ntno fork example use case
+
+1. generate an environment variable file
+   1. manually create file (see [env/](https://github.com/ntno/mkdocs-macros-playground/tree/main/env) for examples)
+   2. OR use [`buildenv`](https://github.com/Comcast/Buildenv-Tool) and a  custom [`variables.yml`](https://github.com/ntno/mkdocs-macros-playground/blob/main/variables.yml) file  
+        ```
+        make docker
+        make exec-build-env env=dev region=us-east-1 file="env/dev-us-east-1.env"
+        exit
+        ```
+2. add variables to `mkdocs.yml` in the `extra` section
+    ````
+    extra:
+        YOUR_VAR: !ENV [YOUR_ENV, 'some default value']
+    ```` 
+3. reference variables in the theme:
+    ```
+    {{ config.extra.YOUR_VAR }}
+    ```
+4. reference variables in the docs:
+   ```
+   {{ YOU_VAR }}
+   ```
+5. load the environment variables and run mkdocs in the same shell session (Makefile in this example uses docker)
+    ```
+    source "env/dev-us-east-1.env" && \
+    mkdocs serve
+    ```
