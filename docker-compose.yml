@@ -1,0 +1,12 @@
+version: '3'
+services:
+  local_development_server:
+    build: .
+    restart: "no"
+    ports:
+      - "8000:8000"
+    environment:
+      LOG_LEVEL: info
+    volumes:
+      - './:/usr/src/'
+    entrypoint: [ "mkdocs", "serve", "-v", "--dev-addr=0.0.0.0:8000" ]
